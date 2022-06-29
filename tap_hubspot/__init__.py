@@ -147,7 +147,8 @@ def get_field_type_schema(field_type):
         return {"type": ["null", "string"]}
 
 def get_field_schema(field_type, extras=False):
-    if extras:
+    # Condition below will need to change if including subfields in table creation
+    if False and extras:  
         return {
             "type": "object",
             "properties": {
